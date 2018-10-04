@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.antoinerousselot.cours1java">
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS "/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +24,38 @@
         <activity
             android:name=".Main2Activity"
             android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Service.ServiceActivity"
+            android:label="ServiceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Service.BoundActivity"
+            android:label="ServiceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Service.UpdaterService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.BoundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".receiver.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".receiver.BroadcastActivity"
+            android:label="@string/title_activity_broadcast"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ContentAdapter"
+            android:label="@string/title_activity_content_adapter"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

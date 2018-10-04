@@ -1,11 +1,16 @@
 package com.example.antoinerousselot.cours1java;
 
+import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.antoinerousselot.cours1java.Service.BoundActivity;
+import com.example.antoinerousselot.cours1java.Service.ServiceActivity;
+import com.example.antoinerousselot.cours1java.receiver.BroadcastActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -16,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent monIntent= new Intent(MainActivity.this,Main2Activity.class);
+                Intent monIntent= new Intent(MainActivity.this,BroadcastActivity.class);
                 startActivity(monIntent);
             }
         });
