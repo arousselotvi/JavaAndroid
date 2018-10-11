@@ -10,7 +10,7 @@ public class ContentAdapter extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState);
         Log.i(TAG, "Lancement activity");
-/*** Liste les colonnes dans contact ***/
+        /*** Liste les colonnes dans contact ***/
         Uri uri = ContactsContract.Contacts.CONTENT_URI; String[] projection = null;
         String selection = null;
         String[] selectionArgs = null;
