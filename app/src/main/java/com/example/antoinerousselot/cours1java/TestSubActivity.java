@@ -8,28 +8,41 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.antoinerousselot.cours1java.Service.BoundActivity;
 import com.example.antoinerousselot.cours1java.Service.ServiceActivity;
 import com.example.antoinerousselot.cours1java.receiver.BroadcastActivity;
 
-import junit.framework.Test;
-
-public class MainActivity extends AppCompatActivity {
+public class TestSubActivity extends AppCompatActivity {
+    int REQUEST_CODE=200;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test_sub);
         Button btn1 = (Button)findViewById(R.id.button1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //This is to trigger an action after a click on the button
-                Intent monIntent= new Intent(MainActivity.this,TestActivityArrayAdapterListView.class);
-                startActivity(monIntent);
+            public void onClick(View arg0) {
+                Intent i = new Intent(TestSubActivity.this,forResultActivity.class);
+                i.putExtra("Value1", "This is value one for ActivityTwo");
+                i.putExtra("Value2", "This is value two for ActivityTwo");
+
+                startActivityForResult(i, REQUEST_CODE);
             }
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (resultCode==RESULT_OK && requestCode==REQUEST_CODE) {
+            if (data.hasExtra("returnKey1")) {
+                Toast.makeText(this, data.getExtras().getString("returnKey1"), Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
     static final String Tag="Centrale";
 
 
