@@ -77,6 +77,22 @@
         <activity
             android:name=".TestActivitySimpleAdapterListView"
             android:label="@string/title_activity_test_simple_adapter_list_view"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LibreActivity"
+            android:label="@string/title_activity_libre"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LivreActivity"
+            android:label="@string/title_activity_livre"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LivreAdapter"
+            android:label="@string/title_activity_livre_adapter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NetworkActivity"
+            android:label="@string/title_activity_network"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

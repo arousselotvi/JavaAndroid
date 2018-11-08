@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //This is to trigger an action after a click on the button
-                Intent monIntent= new Intent(MainActivity.this,TestActivityArrayAdapterListView.class);
+                Intent monIntent= new Intent(MainActivity.this,LivreActivity.class);
                 startActivity(monIntent);
             }
         });

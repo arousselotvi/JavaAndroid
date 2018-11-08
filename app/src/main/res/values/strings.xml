@@ -10,4 +10,8 @@
     </string>
     <string name="title_activity_test_simple_adapter_list_view">TestActivitySimpleAdapterListView
     </string>
+    <string name="title_activity_libre">LibreActivity</string>
+    <string name="title_activity_livre">LivreActivity</string>
+    <string name="title_activity_livre_adapter">LivreAdapter</string>
+    <string name="title_activity_network">NetworkActivity</string>
 </resources>
